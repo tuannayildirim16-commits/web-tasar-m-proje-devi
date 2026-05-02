@@ -2,96 +2,23 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bursa Şehir Tanıtımı</title>
-    <style>
-        body {
-            background-color: #e0f2f1;
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .ana-kapsayici {
-            background: white;
-            width: 100%;
-            min-height: 100vh;
-            padding: 40px;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            color: #2e7d32;
-            text-align: center;
-            font-size: 70px;
-            margin: 20px 0;
-        }
-
-        .slider-alani {
-            width: 100%;
-            height: 600px;
-            background-color: #444;
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
-            .slider-alani img {
-                width: 100%;
-                height: 100%;
-                display: none;
-                object-fit: cover;
-            }
-
-                .slider-alani img.aktif {
-                    display: block !important;
-                }
-
-        .buton-grubu {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        button {
-            padding: 20px 50px;
-            font-size: 30px;
-            cursor: pointer;
-            background: #2e7d32;
-            color: white;
-            border: none;
-            border-radius: 15px;
-            font-weight: bold;
-            margin: 0 10px;
-        }
-
-        .icerik {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            color: #1b5e20;
-            font-size: 50px;
-            border-bottom: 5px solid #2e7d32;
-            padding-bottom: 10px;
-        }
-
-        p, li {
-            font-size: 32px;
-            line-height: 1.6;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="sehrim.css">
 </head>
 <body>
 
     <div class="ana-kapsayici">
         <h1>BURSA</h1>
 
-        <div class="slider-alani">
-            <img src="2.jpg" class="aktif">
-            <img src="3.jpg">
-            <img src="4.jpg">
-            <img src="5.jpg">
+        <!-- Slider Alanı -->
+        <div class="slider-cerceve">
+            <div class="slider-icerik" id="sliderSerit">
+                <img src="2.jpg" alt="Bursa 1">
+                <img src="3.jpg" alt="Bursa 2">
+                <img src="4.jpg" alt="Bursa 3">
+                <img src="5.jpg" alt="Bursa 4">
+            </div>
         </div>
 
         <div class="buton-grubu">
@@ -108,19 +35,30 @@
                 <li>Yeşil Türbe</li>
             </ul>
         </div>
+        <div class="alt-link">
+            <a href="web tasarım proje ödevi.html">Ana Sayfaya Dön</a>
+        </div>
     </div>
+    <div style="text-align: center; margin-top: 20px;">
 
+        <a href="sehrim.html?v=1.1" class="btn btn-outline-success mx-2"></a>
+      
+        </a>
+    </div>
     <script>
         var sira = 0;
-        var resimler = document.querySelectorAll(".slider-alani img");
+        const serit = document.getElementById("sliderSerit");
+        const toplamResim = document.querySelectorAll(".slider-icerik img").length;
 
         function degistir(n) {
-            if (resimler.length === 0) return;
-            resimler[sira].classList.remove("aktif");
             sira += n;
-            if (sira >= resimler.length) sira = 0;
-            if (sira < 0) sira = resimler.length - 1;
-            resimler[sira].classList.add("aktif");
+
+            // Sınır kontrolü
+            if (sira >= toplamResim) sira = 0;
+            if (sira < 0) sira = toplamResim - 1;
+
+            // Şeridi yatayda kaydırıyoruz (her resim %100 genişlikte olduğu için)
+            serit.style.transform = "translateX(" + (-sira * 100) + "%)";
         }
     </script>
 
