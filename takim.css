@@ -1,0 +1,118 @@
+﻿/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #008744; /* Bursaspor Yeşili */
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid #ffffff;
+}
+
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+/* Navigasyon */
+nav {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 15px 0;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #008744;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+            nav ul li a:hover {
+                background: #008744;
+                color: white;
+                border-radius: 5px;
+            }
+
+/* İçerik Alanları */
+main {
+    padding: 20px 0;
+}
+
+h2 {
+    color: #008744;
+    border-left: 5px solid #008744;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Başarılar Grid Yapısı */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.grid-item {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: 5px solid #008744;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+    .grid-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .grid-item h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+}
