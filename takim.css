@@ -1,4 +1,4 @@
-﻿/* Genel Ayarlar */
+﻿
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +18,8 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 header {
-    background: #008744; /* Bursaspor Yeşili */
+    background: #008744; 
     color: #ffffff;
     padding: 60px 0;
     text-align: center;
@@ -32,7 +31,7 @@ header {
         letter-spacing: 2px;
     }
 
-/* Navigasyon */
+
 nav {
     background: #ffffff;
     position: sticky;
@@ -62,7 +61,6 @@ nav {
                 border-radius: 5px;
             }
 
-/* İçerik Alanları */
 main {
     padding: 20px 0;
 }
@@ -82,7 +80,6 @@ h2 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Başarılar Grid Yapısı */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -108,7 +105,6 @@ h2 {
         font-size: 1.2rem;
     }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -116,3 +112,16 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: none;
+    color: #008744;
+    font-weight: bold;
+}
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
