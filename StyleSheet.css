@@ -1,0 +1,405 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#takim-sayfasi {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+#takim-sayfasi .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 20px;
+}
+#takim-sayfasi header {
+        background: #008744;
+        color: #ffffff;
+        padding: 60px 0;
+        text-align: center;
+        border-bottom: 5px solid #ffffff;
+}
+ #takim-sayfasi header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+ }
+
+    #takim-sayfasi nav {
+        background: #ffffff;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+        #takim-sayfasi nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px 0;
+        }
+
+            #takim-sayfasi nav ul li a {
+                text-decoration: none;
+                color: #008744;
+                font-weight: bold;
+                padding: 10px 20px;
+                transition: 0.3s;
+            }
+
+                #takim-sayfasi nav ul li a:hover {
+                    background: #008744;
+                    color: white;
+                    border-radius: 5px;
+                }
+
+    #takim-sayfasi main {
+        padding: 20px 0;
+    }
+
+    #takim-sayfasi h2 {
+        color: #008744;
+        border-left: 5px solid #008744;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    #takim-sayfasi .card {
+        background: white;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    #takim-sayfasi .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    #takim-sayfasi .grid-item {
+        background: #ffffff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #008744;
+        border-radius: 5px;
+        transition: transform 0.3s;
+    }
+
+        #takim-sayfasi .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        #takim-sayfasi .grid-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+    #takim-sayfasi footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+    }
+
+    #takim-sayfasi .back-link {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        text-decoration: none;
+        color: #008744;
+        font-weight: bold;
+    }
+
+        #takim-sayfasi .back-link:hover {
+            text-decoration: underline;
+        }
+#sehrim-sayfasi {
+    background-color: #f8faf9;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+    #sehrim-sayfasi .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+
+    #sehrim-sayfasi .hero-icerik h1 {
+        font-size: 4rem;
+        margin: 0;
+        letter-spacing: 5px;
+    }
+
+    #sehrim-sayfasi .ana-kapsayici {
+        width: 90%;
+        max-width: 1000px;
+        margin: -50px auto 50px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    #sehrim-sayfasi .slider-bolumu {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    #sehrim-sayfasi .slider-cerceve {
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    #sehrim-sayfasi .slider-icerik {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+        #sehrim-sayfasi .slider-icerik img {
+            min-width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+    #sehrim-sayfasi .slider-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    #sehrim-sayfasi .nav-btn {
+        pointer-events: auto;
+        background: rgba(255, 255, 255, 0.8);
+        color: #2e7d32;
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: 0.3s;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+
+        #sehrim-sayfasi .nav-btn:hover {
+            background: #2e7d32;
+            color: white;
+        }
+
+    #sehrim-sayfasi .bilgi-kartlari {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    #sehrim-sayfasi .kart {
+        flex: 1;
+        padding: 20px;
+        background: #e8f5e9;
+        border-left: 5px solid #2e7d32;
+        border-radius: 8px;
+    }
+
+        #sehrim-sayfasi .kart h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+    #sehrim-sayfasi .liste-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    #sehrim-sayfasi .liste-eleman {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+        #sehrim-sayfasi .liste-eleman:hover {
+            transform: translateY(-5px);
+            border-color: #2e7d32;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+    #sehrim-sayfasi .alt-link-alani {
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    #sehrim-sayfasi .ana-sayfa-link {
+        text-decoration: none;
+        color: #2e7d32;
+        font-weight: bold;
+    }
+
+#ozgecmis-sayfasi {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+    #ozgecmis-sayfasi .resume-container {
+        background-color: white;
+        width: 100%;
+        max-width: 750px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    #ozgecmis-sayfasi header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+
+        #ozgecmis-sayfasi header h1 {
+            font-size: 2rem;
+            color: #222;
+        }
+
+    #ozgecmis-sayfasi .subtitle {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    #ozgecmis-sayfasi .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: #444;
+        border-bottom: 2px solid #3498db;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    #ozgecmis-sayfasi .timeline {
+        border-left: 2px solid #3498db;
+        margin-left: 10px;
+        padding-left: 20px;
+    }
+
+    #ozgecmis-sayfasi .egitim-kart {
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    #ozgecmis-sayfasi .dot {
+        position: absolute;
+        left: -27px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        background-color: #3498db;
+        border-radius: 50%;
+    }
+
+    #ozgecmis-sayfasi .content h3 {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    #ozgecmis-sayfasi .school-name {
+        font-weight: bold;
+    }
+
+    #ozgecmis-sayfasi .date {
+        font-size: 0.85rem;
+        color: #777;
+        font-style: italic;
+    }
+
+    #ozgecmis-sayfasi .bottom-nav {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #ozgecmis-sayfasi .back-btn {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+        border: 1px solid #3498db;
+        padding: 8px 20px;
+        border-radius: 5px;
+        transition: 0.2s;
+    }
+
+        #ozgecmis-sayfasi .back-btn:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+#hakkimda-sayfasi {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: #2d3436;
+}
+
+    #hakkimda-sayfasi .static-img {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    #hakkimda-sayfasi .carousel-item img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        background-color: #f8f9fa;
+        display: block;
+    }
+
+    #hakkimda-sayfasi .container {
+        max-width: 900px !important;
+        margin: 0 auto !important;
+    }
+
+    #hakkimda-sayfasi .custom-section {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    #hakkimda-sayfasi .text-box {
+        padding: 15px;
+        background: #fcfcfc;
+        border-radius: 8px;
+    }
