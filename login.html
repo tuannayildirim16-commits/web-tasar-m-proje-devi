@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap | Sakarya Üniversitesi</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+</head>
+<body id="login-sayfasi">
+
+    <div class="login-wrapper">
+        <div class="login-header">
+            <h2>Öğrenci Girişi</h2>
+            <p>Lütfen bilgilerinizi giriniz</p>
+        </div>
+
+        <form action="http://localhost/odev/login.php" method="POST" class="login-form">
+            <div class="login-field">
+                <label>E-posta Adresi</label>
+                <input type="email" name="email" placeholder="tuanna.yildirim@ogr.sakarya.edu.tr" required>
+            </div>
+
+            <div class="login-field">
+                <label>Şifre</label>
+                <input type="password" name="password" placeholder="B251210026" required>
+            </div>
+
+            <button type="submit" class="login-submit-btn">GİRİŞ YAP</button>
+        </form>
+    </div>
+
+</body>
+</html>

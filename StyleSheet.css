@@ -403,3 +403,188 @@
         background: #fcfcfc;
         border-radius: 8px;
     }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#login-sayfasi {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.login-wrapper {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 10px; 
+}
+}
+
+.login-logo {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.login-header h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+    .login-field label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+        font-size: 14px;
+    }
+
+    .login-field input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+        .login-field input:focus {
+            border-color: #007bff;
+        }
+
+.login-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .login-submit-btn:hover {
+        background-color: #0056b3;
+    }
+/* --- İLETİŞİM SAYFASI ÖZEL STİLLERİ --- */
+
+/* Formun genel kapsayıcısı */
+.contact-page-wrapper {
+    background-color: #f0f2f5;
+    padding: 50px 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form kartı tasarımı */
+.contact-form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 800px; /* Formun çok yayılmasını engeller */
+}
+
+    .contact-form-card h2 {
+        color: #0d6efd;
+        font-weight: 700;
+        border-bottom: 2px solid #0d6efd;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+/* Etiketlerin (Label) görünümü */
+.contact-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Bootstrap inputlarını özelleştirme */
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+}
+
+    .contact-form-card .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.25 mil rem rgba(13, 110, 253, 0.25);
+    }
+
+/* Buton grupları için boşluk */
+.contact-btn-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Responsive: Mobil ayarlar */
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .contact-btn-group {
+        flex-direction: column;
+    }
+
+        .contact-btn-group button {
+            width: 100%;
+        }
+}
+/* İletişim butonu - Arkadaki yeşilliği kaldırılmış ve diğerleriyle eşitlenmiş hali */
+.contact-nav-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent; /* Arkadaki yeşilliği tamamen kaldırır */
+    color: #20c997 !important; /* Yazı rengini yeşil yapar */
+    border: 1px solid #20c997; /* Çerçeveyi yeşil yapar */
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: 0 5px;
+}
+
+    /* Üzerine gelince (Hover) efekti */
+    .contact-nav-button:hover {
+        background-color: #20c997; /* Sadece üzerine gelince içi dolsun */
+        color: white !important; /* Yazı beyaz olsun */
+        transform: translateY(-2px);
+    }
