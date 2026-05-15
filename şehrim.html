@@ -3,48 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursa Şehir Tanıtımı</title>
+    <title>Bursa | Yeşilin Başkenti</title>
     <link rel="stylesheet" href="sehrim.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="ana-kapsayici">
-        <h1>BURSA</h1>
+    
+    <header class="hero-section">
+        <div class="hero-icerik">
+            <h1>BURSA</h1>
+            <p>Osmanlı'nın İlk Başkenti, Doğanın ve Tarihin Buluşma Noktası</p>
+        </div>
+    </header>
 
-        <!-- Slider Alanı -->
-        <div class="slider-cerceve">
-            <div class="slider-icerik" id="sliderSerit">
-                <img src="2.jpg" alt="Bursa 1">
-                <img src="3.jpg" alt="Bursa 2">
-                <img src="4.jpg" alt="Bursa 3">
-                <img src="5.jpg" alt="Bursa 4">
+    <main class="ana-kapsayici">
+
+        <section class="slider-bolumu">
+            <div class="slider-cerceve">
+                <div class="slider-icerik" id="sliderSerit">
+                    <img src="2.jpg" alt="Ulu Camii">
+                    <img src="3.jpg" alt="Uludağ">
+                    <img src="4.jpg" alt="Cumalıkızık">
+                    <img src="5.jpg" alt="Tophane">
+                </div>
             </div>
-        </div>
+            <div class="slider-nav">
+                <button onclick="degistir(-1)" class="nav-btn">❮</button>
+                <button onclick="degistir(1)" class="nav-btn">❯</button>
+            </div>
+        </section>
 
-        <div class="buton-grubu">
-            <button onclick="degistir(-1)"> ◄ GERİ </button>
-            <button onclick="degistir(1)"> İLERİ ► </button>
-        </div>
+        <section class="bilgi-kartlari">
+            <div class="kart">
+                <h3>Tarihçe</h3>
+                <p>M.Ö. 4. yüzyılda kurulan Bursa, Osmanlı İmparatorluğu'na 39 yıl başkentlik yapmış, UNESCO Dünya Mirası listesinde yer alan bir kültür şehridir.</p>
+            </div>
+            <div class="kart">
+                <h3>Gastronomi</h3>
+                <p>İskender Kebap, Kemalpaşa Tatlısı ve Kestane Şekeri ile damağınızda unutulmaz izler bırakacak lezzetlerin merkezindesiniz.</p>
+            </div>
+        </section>
 
-        <div class="icerik">
-            <h2>Gezilecek Başlıca Yerler</h2>
-            <ul>
-                <li>Ulu Camii</li>
-                <li>Uludağ</li>
-                <li>Cumalıkızık</li>
-                <li>Yeşil Türbe</li>
-            </ul>
-        </div>
-        <div class="alt-link">
-            <a href="web tasarım proje ödevi.html">Ana Sayfaya Dön</a>
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
+       
+        <section class="gezilecek-yerler">
+            <h2>Gezilmesi Gereken Rotalar</h2>
+            <div class="liste-grid">
+                <div class="liste-eleman">📍 Ulu Camii</div>
+                <div class="liste-eleman">⛷️ Uludağ Kayak Merkezi</div>
+                <div class="liste-eleman">🏘️ Tarihi Cumalıkızık Köyü</div>
+                <div class="liste-eleman">🕌 Yeşil Türbe & Külliye</div>
+                <div class="liste-eleman">🚠 Bursa Teleferik</div>
+                <div class="liste-eleman">🌳 İnkaya Çınarı</div>
+            </div>
+        </section>
 
-        <a href="sehrim.html?v=1.1" class="btn btn-outline-success mx-2"></a>
-      
-        </a>
-    </div>
+        
+    </main>
+
     <script>
         var sira = 0;
         const serit = document.getElementById("sliderSerit");
@@ -52,15 +68,13 @@
 
         function degistir(n) {
             sira += n;
-
-            // Sınır kontrolü
             if (sira >= toplamResim) sira = 0;
             if (sira < 0) sira = toplamResim - 1;
-
-            // Şeridi yatayda kaydırıyoruz (her resim %100 genişlikte olduğu için)
             serit.style.transform = "translateX(" + (-sira * 100) + "%)";
         }
-    </script>
 
+       
+        setInterval(() => degistir(1), 5000);
+    </script>
 </body>
 </html>
