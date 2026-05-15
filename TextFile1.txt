@@ -1,0 +1,34 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // HTML formundaki 'name' alanlarıyla eşleşen verileri çekiyoruz
+    $ad_soyad = htmlspecialchars($_POST['name'] ?? 'Girilmedi');
+    $email    = htmlspecialchars($_POST['email'] ?? 'Girilmedi');
+    $mesaj    = htmlspecialchars($_POST['message'] ?? 'Mesaj boş');
+
+    echo "<!DOCTYPE html>
+    <html lang='tr'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Gönderim Başarılı</title>
+        <style>
+            body { background: #f0f2f5; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+            .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 450px; text-align: center; }
+            h2 { color: #0d6efd; border-bottom: 2px solid #0d6efd; padding-bottom: 10px; }
+            .data { text-align: left; margin: 20px 0; background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 5px solid #20c997; }
+            .back-btn { display: inline-block; padding: 10px 20px; background: #20c997; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <div class='card'>
+            <h2>Formunuz Gönderildi!</h2>
+            <div class='data'>
+                <p><strong>Ad Soyad:</strong> $ad_soyad</p>
+                <p><strong>E-posta:</strong> $email</p>
+                <p><strong>Mesaj:</strong> $mesaj</p>
+            </div>
+            <a href='iletisim.html' class='back-btn'>Tamam</a>
+        </div>
+    </body>
+    </html>";
+}
+?>

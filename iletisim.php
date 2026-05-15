@@ -3,7 +3,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<div style='max-width:600px; margin:50px auto; font-family:sans-serif; border:2px solid #0d6efd; padding:20px; border-radius:10px;'>";
     echo "<h2 style='color:#0d6efd;'>Form Başarıyla Gönderildi</h2><hr>";
     foreach ($_POST as $key => $value) {
-        // Checkbox dizi olarak gelebileceği için kontrol ediyoruz
         $displayValue = is_array($value) ? implode(", ", $value) : htmlspecialchars($value);
         echo "<p><strong>" . ucfirst($key) . ":</strong> " . $displayValue . "</p>";
     }

@@ -494,9 +494,7 @@
     .login-submit-btn:hover {
         background-color: #0056b3;
     }
-/* --- İLETİŞİM SAYFASI ÖZEL STİLLERİ --- */
 
-/* Formun genel kapsayıcısı */
 .contact-page-wrapper {
     background-color: #f0f2f5;
     padding: 50px 0;
@@ -504,14 +502,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Form kartı tasarımı */
 .contact-form-card {
     background: #ffffff;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin: 0 auto;
-    max-width: 800px; /* Formun çok yayılmasını engeller */
+    max-width: 800px;
 }
 
     .contact-form-card h2 {
@@ -522,7 +519,6 @@
         margin-bottom: 30px;
     }
 
-/* Etiketlerin (Label) görünümü */
 .contact-label {
     font-weight: 600;
     color: #333;
@@ -530,7 +526,6 @@
     display: block;
 }
 
-/* Bootstrap inputlarını özelleştirme */
 .contact-form-card .form-control,
 .contact-form-card .form-select {
     border-radius: 8px;
@@ -543,7 +538,6 @@
         box-shadow: 0 0 0 0.25 mil rem rgba(13, 110, 253, 0.25);
     }
 
-/* Buton grupları için boşluk */
 .contact-btn-group {
     margin-top: 30px;
     display: flex;
@@ -551,7 +545,7 @@
     justify-content: center;
 }
 
-/* Responsive: Mobil ayarlar */
+
 @media (max-width: 768px) {
     .contact-form-card {
         padding: 20px;
@@ -566,13 +560,12 @@
             width: 100%;
         }
 }
-/* İletişim butonu - Arkadaki yeşilliği kaldırılmış ve diğerleriyle eşitlenmiş hali */
 .contact-nav-button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: transparent; /* Arkadaki yeşilliği tamamen kaldırır */
-    color: #20c997 !important; /* Yazı rengini yeşil yapar */
-    border: 1px solid #20c997; /* Çerçeveyi yeşil yapar */
+    background-color: transparent; 
+    color: #20c997 !important; 
+    border: 1px solid #20c997; 
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
@@ -582,9 +575,9 @@
     margin: 0 5px;
 }
 
-    /* Üzerine gelince (Hover) efekti */
+   
     .contact-nav-button:hover {
-        background-color: #20c997; /* Sadece üzerine gelince içi dolsun */
-        color: white !important; /* Yazı beyaz olsun */
+        background-color: #20c997; 
+        color: white !important; 
         transform: translateY(-2px);
     }
